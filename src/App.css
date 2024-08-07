@@ -2,30 +2,63 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.App-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.App-header ul {
+  list-style: none;
+}
+
+.Header-logo figure {
+  font-weight: 300;
+}
+
+.Header-logo figcaption {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.Header-link {
+  color: white;
+  font-weight: 400;
+  margin: 10px 15px;
+}
+
+.Main-banner {
+  background: url('./assets//home/islas-faroe.jpg') center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: -1;
+}
+
+.Main-banner:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #0000002b;
   pointer-events: none;
+}
+
+.Main-banner h1 {
+  font-size: 45px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +68,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+* {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
