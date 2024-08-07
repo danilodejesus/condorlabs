@@ -35,6 +35,9 @@ function App() {
           <h1>
             Alas tecnológicas para tu éxito.
           </h1>
+          <p>
+            
+          </p>
         </div>
       </section>
     </div>

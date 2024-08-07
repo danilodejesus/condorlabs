@@ -30,7 +30,7 @@
 }
 
 .Main-banner {
-  background: url('./assets//home/islas-faroe.jpg') center center no-repeat;
+  background: url('./assets//home/dk2.webp') center center no-repeat;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -49,6 +49,7 @@
   bottom: 0;
   background: #0000002b;
   pointer-events: none;
+  z-index: -1;
 }
 
 .Main-banner h1 {
