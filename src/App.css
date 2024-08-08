@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .App-header ul {
@@ -30,7 +30,7 @@
 }
 
 .Main-banner {
-  background: url('./assets//home/dk2.webp') center center no-repeat;
+  background: url('./assets/home/banner/dk2.webp') center center no-repeat;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -54,6 +54,90 @@
 
 .Main-banner h1 {
   font-size: 45px;
+}
+
+
+.Introduction p {
+  color: black;
+  text-align: center;
+  margin: 60px 80px;
+}
+
+
+.Services {
+  background-color: black;
+  padding: 60px 0;
+}
+
+.Service {
+  width: 31%;
+  margin: 0;
+}
+
+.Service img {
+  background: white;
+  padding: 10px;
+  border-radius: 15px;
+  /* width: 60px;
+  height: 60px; */
+  margin-bottom: 15px;
+}
+
+
+.Stories {
+  padding: 60px 0;
+  background: gray;
+}
+
+
+.Connect {
+  padding: 60px 0;
+  background-color: blueviolet;
+  text-align: ce;
+}
+
+.Connect-form {
+  width: 70%;
+}
+
+.Connect-form input:first-child {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.Connect-form input:nth-child(2) {
+  width: 27%;
+  margin: auto;
+  margin-right: 2.7%;
+  margin-bottom: 10px;
+}
+
+.Connect-form input:nth-child(3) {
+  width: 27%;
+  margin: auto;
+  margin-left: 2.5%;
+  margin-bottom: 10px;
+}
+
+.Connect-form input:last-child {
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+
+.Connect-info {
+  width: 30%
+}
+
+.Connect-info ul {
+  padding: 0;
+  text-align: left;
+}
+
+.Connect-info li {
+  list-style-type: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -82,7 +166,7 @@ a {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 960px;
   margin: auto;
 }
 
@@ -90,4 +174,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.f-start {
+  align-items: flex-start;
 }
