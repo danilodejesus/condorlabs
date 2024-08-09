@@ -17,17 +17,17 @@ function App() {
         <ul className='flex'>
           <li>
             <a href="/" className='Header-link'>
-              Acerca de
+              Os
             </a>
           </li>
           <li>
             <a href="/" className='Header-link'>
-              Servicios
+              Tjenester
             </a>
           </li>
           <li>
             <a href="/" className='Header-link'>
-              Contacto
+              Kontakt
             </a>
           </li>
         </ul>
@@ -36,15 +36,53 @@ function App() {
       <section className='Main-banner'>
         <div className='container'>
           <h1>
-            Alas tecnológicas para tu éxito.
+            Teknologiske vinger til din succes.
           </h1>
-          <p>
-
-          </p>
+          <ul class="df container videoBanner-skills active">
+            <li>
+              <a href="/diseno-web/">
+                <figure class="df">
+                  <h2>DISEÑO WEB</h2>
+                </figure>
+                <p>Nuestro servicio clave son páginas web profesionales y únicas. <br/>
+                  <span>Disponible en dispositivos móviles, listo para SEO (Google).</span>
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="/portafolio/">
+                <figure class="df">
+                  <h2>CONSULTORÍA TECNOLÓGICA</h2>
+                </figure>
+                <p>
+                  Cómo la empresa ayuda a optimizar procesos utilizando tecnología avanzada.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="/viaje-de-trabajo/">
+                <figure class="df">
+                  <h2>HOSTING Y SEGURIDAD</h2>
+                </figure>
+                <p>
+                  Ofrecemos servicios avanzados de alojamiento web y ciberseguridad.
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="/imagenes-de-drones/">
+                <figure class="df">
+                  <h2>IMÁGENES DE DRONES</h2>
+                </figure>
+                <p>Brindamos servicios de fotografía y video aéreo con drones.  <span>Certificados con licencia para conducir drones.</span>
+                </p>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section className='Introduction container'>
+      <section className='Introduction'>
         <p className=''>
           Condor Labs busca conectar la majestuosidad del cóndor con la tecnología avanzada, <br/> destacando un compromiso con la excelencia, la innovación y la sostenibilidad, <br/> todos valores importantes tanto en el ámbito tecnológico  <br/> como en la cultura danesa.
         </p>
@@ -55,11 +93,12 @@ function App() {
           <figure className='Service'>
             <img src={responsive} alt="" width="60" />
             <figcaption>
-              Desarrollo Web y Tecnológico
+              Desarrollo de Sistemas
               <p>
+                E-commerce <br/>
                 Desarrollo web <br/>
                 Aplicaciones móviles <br/>
-                Integración de sistemas <br/>
+                Actualización de WordPress<br/>
               </p>
             </figcaption>
           </figure>
@@ -68,7 +107,10 @@ function App() {
             <figcaption>
               Consultoría Tecnológica
               <p>
-                Cómo la empresa ayuda a optimizar procesos utilizando tecnología avanzada.
+                Transformación Digital <br/>
+                Integración de Sistemas <br/>
+                Asesoramiento en Software <br/>
+                Actualización de WordPress<br/>
               </p>
             </figcaption>
           </figure>
@@ -78,8 +120,9 @@ function App() {
               Hosting y Seguridad
               <p>
                 Alojamiento web <br/>
-                Medidas de seguridad <br/>
-                Verificación de seguridad <br/>
+                Pruebas de Penetración <br/>
+                Monitoreo de Seguridad 24/7 <br/>
+                Seguridad de Aplicaciones Web <br/>
               </p>
             </figcaption>
           </figure>
