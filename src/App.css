@@ -79,6 +79,7 @@
   width: 21%;
   border-right: 1px solid black;
   padding: 20px;
+  list-style-type: none;
 }
 
 .videoBanner-skills h2,
@@ -107,12 +108,21 @@
 
 .Services {
   background-color: black;
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 .Service {
   width: 31%;
   margin: 0;
+}
+
+.Service figcaption {
+  font-size: 20px;
+}
+
+.Service p {
+  font-size: 16px;
+  line-height: 25px;
 }
 
 .Service img {
@@ -130,11 +140,37 @@
   background: gray;
 }
 
+.Stories h4 {
+  max-width: 400px;
+  text-align: left;
+}
+
+.Stories-slider {
+  max-width: 400px;
+}
+
+.Stories-slide {
+  /* margin: 0 25px; */
+}
+
 
 .Connect {
   padding: 60px 0;
-  background-color: blueviolet;
-  text-align: ce;
+  background: url(./assets/home/contact/nieve2.JPG) 0px -30px no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+.Connect:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #00000087;
+  pointer-events: none;
 }
 
 .Connect-form {
@@ -151,14 +187,14 @@
 .Connect-form input:nth-child(2) {
   width: 27%;
   margin: auto;
-  margin-right: 2.7%;
+  margin-right: 2.3%;
   margin-bottom: 10px;
 }
 
 .Connect-form input:nth-child(3) {
   width: 27%;
   margin: auto;
-  margin-left: 2.5%;
+  margin-left: 2.3%;
   margin-bottom: 10px;
 }
 
@@ -179,6 +215,19 @@
 
 .Connect-info li {
   list-style-type: none;
+}
+
+
+.Footer {
+  background-color: #13130d;
+}
+
+.footer-socialNetwork a {
+  pointer-events: none;
+}
+
+.footer-socialNetwork img {
+  margin: 0 10px
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -219,4 +268,20 @@ a {
 
 .f-start {
   align-items: flex-start;
+}
+
+.evenly {
+  justify-content: space-evenly;
+}
+
+.between {
+  justify-content: space-between
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.relative {
+  position: relative;
 }

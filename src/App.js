@@ -2,9 +2,22 @@ import condor from './assets/home/banner/condorlabs.png';
 import responsive from './assets/home/services/responsive.jpg'
 import consultoria from './assets/home/services/consultoria-tec.jpg'
 import hosting from './assets/home/services/hosting.png'
+import drone from './assets/home/services/drone.jpg'
+
 import './App.css';
 
+import Slider from "react-slick";
+
 function App() {
+  var settings = {
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    auto: true,
+  };
   return (
     <div className="App">
       <header className="App-header container">
@@ -126,17 +139,74 @@ function App() {
               </p>
             </figcaption>
           </figure>
+          <figure className='Service'>
+            <img src={drone} alt="" width="60" />
+            <figcaption>
+              Imágenes de drones
+              <p>
+                Fotografía y video <br/>
+                Seguridad y vigilancia <br/>
+                Precisión en agricultura <br/>
+                Inspección de construcción <br/>
+              </p>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <section className='Stories'>
-        <p>
-          Comentarios de clientes satisfechos en Dinamarca (si los hay) o proyectos destacados.
-        </p>
+        <div className='container flex evenly'>
+          <h4>
+            Opiniones <br/>
+            <img src="https://daniloviacava-40daf.web.app/static/img/Fb-rates.png"/> <br/>
+            <i>Clientes satisfechos</i>
+          </h4>
+
+          <div className='Stories-slider'>
+            <Slider {...settings}>
+              <div className='Stories-slide'>
+                <h3>Mario Gabaldoni</h3>
+                <p>
+                  Me desarrollaron un sistema intuitivo y facil de utilizar, pude reducir los tiempos en mis procesos de venta.
+                </p>
+              </div>
+              <div className='Stories-slide'>
+                <h3>Andrew Tate</h3>
+                <p>
+                  Demostró calidad y ser ágil con los cambios que se necesitaban con rapidez.
+                </p>
+              </div>
+              <div className='Stories-slide'>
+                <h3>Inka Pachacutec</h3>
+                <p>
+                  Danilo es millonario en un mes, consiguió un trabajo con drones y haciendo sistemas.
+                </p>
+              </div>
+              <div className='Stories-slide'>
+                <h3>Jorge Luna</h3>
+                <p>
+                  Eres un chucha en tu chamba, sigue dando calidad y buenas satisfacciones 5 estrellas a tus clientes.
+                </p>
+              </div>
+              <div className='Stories-slide'>
+                <h3>Nicolas Paucar</h3>
+                <p>
+                  Acepta todo de ti y proyecta todo lo que quieres lograr desde el corazón.
+                </p>
+              </div>
+              <div className='Stories-slide'>
+                <h3>Roberto Neo Tolteca</h3>
+                <p>
+                  Rompe la matrix, cree en tí y juega pensando siempre desde el corazón, eres serio y comprometido.
+                </p>
+              </div>
+            </Slider>
+          </div>
+        </div>
       </section>
 
       <section className='Connect'>
-        <div className='container'>
+        <div className='container relative'>
           <h4>Contáctanos</h4>
           <div className='flex'>
             <div className='Connect-form'>
@@ -169,6 +239,29 @@ function App() {
           </div>
         </div>
       </section>
+
+      <footer className='Footer'>
+        <div className='container flex between'>
+          <div className='footer-left'>
+            <div class="footer-socialNetwork">
+              <a target="_blank" href="/">
+                <img src="https://daniloviacava-40daf.web.app/static/img/facebookIcon.svg" alt="" width="12" />
+              </a>
+              <a target="_blank" href="/">
+                <img src="https://daniloviacava-40daf.web.app/static/img/instagramIcon.svg" alt="" width="20" />
+              </a>
+              <a target="_blank" href="/">
+                <img src="https://daniloviacava-40daf.web.app/static/img/whatsapp.png" alt="" width="20"/>
+              </a>
+            </div>
+          </div>
+          <div className='footer-right'>
+            <p>
+              Privacy Policy | © CondorLabs 2024
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
