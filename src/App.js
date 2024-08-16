@@ -1,3 +1,4 @@
+'use client';
 import condor from './assets/home/banner/condorlabs.png';
 import responsive from './assets/home/services/responsive.jpg'
 import consultoria from './assets/home/services/consultoria-tec.jpg'
@@ -8,7 +9,56 @@ import './App.css';
 
 import Slider from "react-slick";
 
+import { useEffect, useState } from 'react';
+import { database } from './firebaseConfig';
+import { ref, get, push, set } from 'firebase/database';
+
 function App() {
+  const [users, setUsers] = useState([]);
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleData  = () => {
+    try {
+      const usersRef = ref(database, 'users');
+      const newDataRef = push(usersRef);
+
+      set(newDataRef, {
+        name,
+        email,
+        phone,
+        message
+      });
+      setName('')
+      setEmail('')
+      setPhone('')
+      setMessage('')
+      alert('Data added successfully')
+    } catch (error) {
+      console.error('Firebase error: ', error);
+    }
+  }
+
+  useEffect(() => {
+    const usersRef = ref(database, 'users');
+    get(usersRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        const usersArray = Object.entries(snapshot.val()).map(([id, data]) => ({
+          id,
+          ...data,
+        }));
+        setUsers(usersArray);
+      } else {
+        console.log('No data available')
+      }
+    }).catch((error) => {
+        console.error(error)
+    });
+  }, [])
+
   const handleMouseEnter = () => {
     const serviceWeb = document.querySelector('.Services')
     serviceWeb.style.background = "url('https://img.freepik.com/foto-gratis/experiencia-programacion-persona-que-trabaja-codigos-computadora_23-2150010125.jpg') center center no-repeat";
@@ -125,17 +175,17 @@ function App() {
         </a>
         <ul className='flex'>
           <li>
-            <a href="/" className='Header-link'>
+            <a href={'#introduction'} className='Header-link'>
               Os
             </a>
           </li>
           <li>
-            <a href="/" className='Header-link'>
+            <a href={'#services'} className='Header-link'>
               Tjenester
             </a>
           </li>
           <li>
-            <a href="/" className='Header-link'>
+            <a href={'#kontakt'} className='Header-link'>
               Kontakt
             </a>
           </li>
@@ -192,7 +242,7 @@ function App() {
         </div>
       </section>
 
-      <section className='Introduction'>
+      <section className='Introduction' id='introduction'>
         <p className=''>
         Condor Labs søger at forbinde kondorens majestæt med avanceret teknologi, <br/> 
         der fremhæver en forpligtelse til ekspertise, innovation og bæredygtighed, <br/> 
@@ -201,7 +251,7 @@ function App() {
         </p>
       </section>
 
-      <section className='Services'>
+      <section className='Services' id="services">
         <div className='container flex f-start relative'>
           <figure 
             className='Service web' 
@@ -314,16 +364,50 @@ function App() {
         </div>
       </section>
 
-      <section className='Connect'>
+      <section className='Connect' id="kontakt">
         <div className='container relative'>
           <h4>Kontakt os</h4>
+
+          {/* <div>
+            <h4>Data from realtime database</h4>
+            <div>
+              {users.map((user) => (
+                <div key={user.id}>
+                  {user.title} <br/>
+                  {user.subtitle}
+                </div>
+              ))}
+            </div>
+          </div> */}
+
           <div className='flex'>
             <div className='Connect-form'>
               <form>
-                <input placeholder='Nombres' />
-                <input placeholder='Email' />
-                <input placeholder='Celular' />
-                <input placeholder='Mensaje' />
+                <input 
+                  type='text'
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder='Nombres' />
+                <input 
+                  type='text'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder='Email' />
+                <input 
+                  type='text'
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder='Celular' />
+                <input 
+                  type='text'
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder='Mensaje'
+                  className='Input-message' />
+                
+                <button className='button' onClick={handleData}>
+                  Send
+                </button>
               </form>
             </div>
             <div className='Connect-info'>

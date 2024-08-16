@@ -201,6 +201,9 @@
   margin-right: 5%;
 }
 
+.Connect-form input {
+  color: black;
+}
 
 .Connect-form input:first-child {
   width: 90%;
@@ -229,7 +232,7 @@
   border-radius: 20px;
 }
 
-.Connect-form input:last-child {
+.Connect-form .Input-message {
   width: 90%;
   margin: auto;
   display: block;
@@ -252,6 +255,17 @@
 
 .Connect-info li {
   list-style-type: none;
+}
+
+.Connect-form .button {
+  width: 20%;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
 }
 
 
