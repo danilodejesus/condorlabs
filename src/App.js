@@ -43,6 +43,17 @@ function App() {
   }
 
   useEffect(() => {
+    const header = document.querySelector('.App-header')
+    header.classList.add('active')
+    const title = document.querySelector('.Main-banner h1')
+    title.classList.add('active')
+
+
+    setTimeout(() => {
+      const skills = document.querySelector('.videoBanner-skills')
+      skills.classList.add('active')
+    }, 4000);
+    
     const usersRef = ref(database, 'users');
     get(usersRef).then((snapshot) => {
       if (snapshot.exists()) {
@@ -387,7 +398,7 @@ function App() {
                   type='text'
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder='Nombres' />
+                  placeholder='Navne' />
                 <input 
                   type='text'
                   value={email}
@@ -397,16 +408,16 @@ function App() {
                   type='text'
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder='Celular' />
+                  placeholder='Cellulære' />
                 <input 
                   type='text'
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder='Mensaje'
+                  placeholder='Besked'
                   className='Input-message' />
                 
                 <button className='button' onClick={handleData}>
-                  Send
+                  Sende
                 </button>
               </form>
             </div>
