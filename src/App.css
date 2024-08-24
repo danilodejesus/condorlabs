@@ -119,9 +119,11 @@
 }
 
 .Introduction {
-  padding: 60px 80px;
+  padding: 80px;
   background: #0a272e;
   box-shadow: inset 0px 12px 26px -7px rgba(0,0,0,0.1);
+  /* background: url(./assets/home/intro/particles.webp) center center; */
+  background-size: cover;
 }
 
 .Introduction p {
@@ -133,7 +135,7 @@
 
 .Services {
   background-color: black;
-  padding: 100px 0;
+  padding: 150px 0;
   background-size: cover !important;
   background-repeat: no-repeat;
   position: relative;
@@ -175,8 +177,8 @@
 
 
 .Stories {
-  padding: 60px 0;
-  background: #876f43;
+  padding: 50px 0;
+  background: #5d5f5e;
 }
 
 .Stories h4 {
@@ -356,7 +358,7 @@
   }
 
   .Introduction {
-    padding: 40px 30px;
+    padding: 80px 30px
   }
 
   .Introduction br {
