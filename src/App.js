@@ -206,12 +206,19 @@ function App() {
       <section className='Main-banner'>
         <div className='container'>
           <h1>
-            Teknologiske vinger til din succes.
+            Moment to update
           </h1>
+          <h2>
+            Strong and scalable systems
+          </h2>
+          <a className='Main-banner-link' href="">
+            About us
+          </a>
           <ul class="df container videoBanner-skills active">
             <li>
               <a href="/diseno-web/">
-                <figure class="df">
+                <figure class="flex">
+                  <img src="https://daniloviacava-40daf.web.app/static/img/responsive.svg" alt="" width={30} />
                   <h2>WEBDESIGN</h2>
                 </figure>
                 <p>Vores nøgleservice er professionelle og unikke hjemmesider. <br/>
@@ -221,8 +228,9 @@ function App() {
             </li>
             <li>
               <a href="/portafolio/">
-                <figure class="df">
-                  <h2>TEKNOLOGISK RÅDGIVNING</h2>
+                <figure class="flex">
+                  <img src="https://daniloviacava-40daf.web.app/static/img/profiles.svg" alt="" width={30} />
+                  <h2>RÅDGIVNING</h2>
                 </figure>
                 <p>
                   Hvordan virksomheden hjælper med at optimere processer ved hjælp af avanceret teknologi.
@@ -231,8 +239,9 @@ function App() {
             </li>
             <li>
               <a href="/viaje-de-trabajo/">
-                <figure class="df">
-                  <h2>HOSTING OG SIKKERHED</h2>
+                <figure class="flex">
+                  <img src="https://daniloviacava-40daf.web.app/static/img/handshake.svg" alt="" width={30} />
+                  <h2>HOSTING</h2>
                 </figure>
                 <p>
                   Vi tilbyder avancerede webhosting- og cybersikkerhedstjenester.
@@ -241,7 +250,8 @@ function App() {
             </li>
             <li>
               <a href="/imagenes-de-drones/">
-                <figure class="df">
+                  <figure class="flex">
+                    <img src="https://daniloviacava-40daf.web.app/static/img/drone.svg" alt="" width={30} />
                   <h2>DRONE BILLEDER</h2>
                 </figure>
                 <p>Vi leverer luftfotografering og videotjenester med droner.

@@ -11,6 +11,7 @@
   opacity: 0;
   transition: .25s linear;
   animation-delay: 1.5s;
+  z-index: 1;
 }
 .App-header.active {
   opacity: 1;
@@ -22,6 +23,8 @@
 
 .Header-logo figure {
   font-weight: 300;
+  margin: 0;
+  margin-top: 10px;
 }
 
 .Header-logo figcaption {
@@ -49,8 +52,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: -1;
+}
+
+.Main-banner .container {
+  text-align: left;
 }
 
 .Main-banner:before {
@@ -62,15 +67,41 @@
   bottom: 0;
   background: #0000002b;
   pointer-events: none;
-  z-index: -1;
 }
 
 .Main-banner h1 {
+  position: relative;
   font-size: 45px;
   opacity: 0;
-  /* transform: scale(0); */
   transition: .5s ease;
   transition-delay: 1.5s;
+  width: 500px;
+  text-align: left;
+  margin: 0;
+}
+
+.Main-banner h2 {
+  position: relative;
+  text-align: left;
+  font-size: 35px;
+  margin-top: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.Main-banner-link {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid white;
+  transition: .25s;
+  padding: 10px 20px;
+}
+.Main-banner-link:hover {
+  border-radius: 12px;
+  border: 1px solid white;
+  padding: 10px 20px;
+  background-color: white;
+  color: black
 }
 
 .Main-banner h1.active {
@@ -114,16 +145,23 @@
   font-size: 11px;
 }
 
+.videoBanner-skills h2 {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  margin-left: 10px;
+}
+
 .videoBanner-skills figure {
   margin: 0;
+  justify-content: flex-start;
 }
 
 .Introduction {
   padding: 80px;
   background: #0a272e;
   box-shadow: inset 0px 12px 26px -7px rgba(0,0,0,0.1);
-  /* background: url(./assets/home/intro/particles.webp) center center; */
-  background-size: cover;
+  /* background: url(./assets/home/intro/particles.gif) center center; */
+  /* background-size: cover; */
 }
 
 .Introduction p {
@@ -333,13 +371,24 @@
   }
 
   .Main-banner {
-    background-position: -630px -20px;
+    /* background-position: -630px -20px; */
+    animation: bg_move 20s ease infinite
   }
   
   .Main-banner h1 {
-    font-size: 25px;
+    font-size: 35px;
     width: 80%;
     margin: auto;
+    margin-left: 0;
+  }
+  
+  .Main-banner h2 {
+    font-size: 25px;
+  }
+
+  .Main-banner-link {
+    padding: 10px 20px;
+    display: inline-block;
     margin-bottom: 100px;
   }
 
@@ -352,9 +401,13 @@
   }
 
   .videoBanner-skills li {
-    width: 44%;
+    width: 44.5%;
     padding: 10px;
     border-bottom: 1px solid black;
+  }
+
+  .videoBanner-skills h2 {
+    font-size: 18px;
   }
 
   .Introduction {
@@ -435,6 +488,7 @@
   .Footer .container {
     flex-direction: column;
     padding: 20px;
+    box-sizing: border-box;
   }
 }
 
@@ -459,6 +513,7 @@ a {
 
 .container {
   max-width: 960px;
+  width: 94%;
   margin: auto;
 }
 
@@ -504,6 +559,15 @@ a {
     top: 0%;
     left: 100%;
     opacity: 0;
+  }
+}
+
+@keyframes bg_move {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: -1000px 0;
   }
 }
 
