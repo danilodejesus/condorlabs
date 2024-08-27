@@ -175,6 +175,16 @@ function App() {
     slidesToScroll: 1,
     auto: true,
   };
+
+  var portafolio = {
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    auto: true,
+  };
   return (
     <div className="App">
       <header className="App-header container">
@@ -380,6 +390,65 @@ function App() {
                   De hjalp os med at udvikle en mobil aftalebestillingsapp, vi har set en markant stigning i konverteringer og en forbedring af brugeroplevelsen. Jeg vil helt klart anbefale deres tjenester til enhver virksomhed, der ønsker at skille sig ud på det digitale marked.
                 </p>
               </div>
+            </Slider>
+          </div>
+        </div>
+      </section>
+
+      <section className='Portafolio'>
+        <div className='container'>
+          <h4 className='Portafolio-h4'>Nuestro trabajo, es nuestra pasión.
+          </h4>
+          <p>Proyectos Web</p>
+          <div className='Portafolio-slider'>
+            <Slider {...portafolio}>
+              <a href="https://profealtoque.com.pe/" target='_blank' className='Portafolio-slide'>
+                <figure>
+                  <div className='Portafolio-mascara'>
+                    <div className='Portafolio-item-bg'></div>
+                  </div>
+                </figure>
+              </a>
+              <a href="https://millas-latam.web.app/" target='_blank' className='Portafolio-slide'>
+                <figure>
+                  <div className='Portafolio-mascara'>
+                    <div className='Portafolio-item-bg'
+                    style={{background: 'url(https://firebasestorage.googleapis.com/v0/b/daniloviacava-40daf.appspot.com/o/millas-latam.png?alt=media&token=f0c7f428-7bf4-4d49-99fe-cf4ac7893897) center center no-repeat', backgroundSize: 'cover'}}></div>
+                  </div>
+                </figure>
+              </a>
+              <a href="http://www.clubterrazas.com.pe/" target='_blank' className='Portafolio-slide'>
+                <figure>
+                  <div className='Portafolio-mascara'>
+                    <div className='Portafolio-item-bg'
+                      style={{background: 'url(https://firebasestorage.googleapis.com/v0/b/daniloviacava-40daf.appspot.com/o/terrazas.jpg?alt=media&token=94c03751-ab06-4e2e-89fd-33efabce4117) center center no-repeat', backgroundSize: 'cover'}}></div>
+                  </div>
+                </figure>
+              </a>
+              <a href="https://www.clinicainternacional.com.pe/" target='_blank' className='Portafolio-slide'>
+                <figure>
+                  <div className='Portafolio-mascara'>
+                    <div className='Portafolio-item-bg'
+                    style={{background: 'url(https://firebasestorage.googleapis.com/v0/b/daniloviacava-40daf.appspot.com/o/clinicaInternacional.jpg?alt=media&token=c367036f-5b56-43b9-bf3c-aaf74ad08b95) center center no-repeat', backgroundSize: 'cover'}}></div>
+                  </div>
+                </figure>
+              </a>
+              <a href="https://www.sanpiox.edu.pe/" target='_blank' className='Portafolio-slide'>
+                <figure>
+                  <div className='Portafolio-mascara'>
+                    <div className='Portafolio-item-bg'
+                    style={{background: 'url(https://firebasestorage.googleapis.com/v0/b/daniloviacava-40daf.appspot.com/o/sanpiox.jpg?alt=media&token=55944382-8c24-49bb-b7e3-2d1384fb72d3) center center no-repeat', backgroundSize: 'cover'}}></div>
+                  </div>
+                </figure>
+              </a>
+              <a href="https://www.canalipe.gob.pe/" target='_blank' className='Portafolio-slide'>
+                <figure>
+                  <div className='Portafolio-mascara'>
+                    <div className='Portafolio-item-bg'
+                    style={{background: 'url(https://firebasestorage.googleapis.com/v0/b/daniloviacava-40daf.appspot.com/o/canalipe.jpg?alt=media&token=a6774d89-f051-4614-bf8c-ad43b0c2d536) center center no-repeat', backgroundSize: 'cover'}}></div>
+                  </div>
+                </figure>
+              </a>
             </Slider>
           </div>
         </div>

@@ -232,6 +232,51 @@
   /* margin: 0 25px; */
 }
 
+.Portafolio {
+  background-color: #06aec8;
+  padding: 60px 0;
+}
+
+.Portafolio-h4 {
+  margin: 0;
+  font-size: 24px;
+  padding: 20px 0;
+}
+
+.Portafolio-slider {
+
+}
+
+.Portafolio-slide figure {
+  margin: 10px auto;
+  height: 180px;
+  width: 300px;
+  background: url(https://daniloviacava-40daf.web.app/static/img/Macbook.svg) center center no-repeat;
+  background-size: cover;
+}
+
+.Portafolio-mascara {
+  height: 158px;
+  overflow: hidden;
+  position: relative;
+}
+.Portafolio-item-bg {
+  max-width: 100%;
+  width: 76%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 2px;
+  height: 143px;
+  background: url(https://firebasestorage.googleapis.com/v0/b/daniloviacava-40daf.appspot.com/o/profe.jpg?alt=media&token=e02ac6a9-5665-4e85-98ce-c272b0de9693) center center no-repeat;
+  background-size: cover;
+
+}
+
 
 .Connect {
   padding: 140px 0;
@@ -377,7 +422,7 @@
   
   .Main-banner h1 {
     font-size: 35px;
-    width: 80%;
+    width: 100%;
     margin: auto;
     margin-left: 0;
   }
@@ -401,7 +446,7 @@
   }
 
   .videoBanner-skills li {
-    width: 44.5%;
+    width: 44.2%;
     padding: 10px;
     border-bottom: 1px solid black;
   }
