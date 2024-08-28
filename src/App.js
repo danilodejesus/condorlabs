@@ -13,7 +13,18 @@ import { useEffect, useState } from 'react';
 import { database } from './firebaseConfig';
 import { ref, get, push, set } from 'firebase/database';
 
+import './i18n'
+
+import { useTranslation } from 'react-i18next';
+
 function App() {
+
+  const [ t, i18n ] = useTranslation();
+
+  const changeLanguage2 = (lng) => {
+    i18n.changeLanguage(lng)
+  }
+
   const [users, setUsers] = useState([]);
 
   const [name, setName] = useState('');
@@ -215,32 +226,36 @@ function App() {
         <ul className='flex'>
           <li>
             <a href={'#introduction'} className='Header-link'>
-              Os
+              {t('HeaderLink1')}
             </a>
           </li>
           <li>
             <a href={'#services'} className='Header-link'>
-              Tjenester
+              {t('HeaderLink2')}
             </a>
           </li>
           <li>
             <a href={'#kontakt'} className='Header-link'>
-              Kontakt
+              {t('HeaderLink3')}
             </a>
           </li>
         </ul>
+        <div className='i18n'>
+          <button onClick={() => changeLanguage2('dk')}>DK</button>
+          <button onClick={() => changeLanguage2('en')}>EN</button>
+        </div>
       </header>
 
       <section className='Main-banner'>
         <div className='container'>
           <h1>
-            Moment to update
+            {t('BannerTitle')}
           </h1>
           <h2>
-            Strong and scalable systems
+            {t('BannerSubTitle')}
           </h2>
           <a className='Main-banner-link' href="">
-            About us
+            {t('BannerButton')}
           </a>
           <ul class="df container videoBanner-skills active">
             <li>
@@ -415,9 +430,9 @@ function App() {
 
       <section className='Portafolio'>
         <div className='container'>
-          <h4 className='Portafolio-h4'>Nuestro trabajo, es nuestra pasión.
+          <h4 className='Portafolio-h4'>Vores projekter er vores passion
           </h4>
-          <p>Proyectos Web</p>
+          <p>Webprojekter</p>
           <div className='Portafolio-slider'>
             <Slider {...portafolio}>
               <a href="https://profealtoque.com.pe/" target='_blank' className='Portafolio-slide'>
