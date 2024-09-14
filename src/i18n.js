@@ -16,7 +16,7 @@ const resources = {
       "BannerButton": "Os",
 
       "ServiceUno": "WEBDESIGN",
-      "ServiceUnoDescription": "Vores nøgleservice er professionelle og unikke hjemmesider. Tilgængelig på mobile enheder, SEO (Google) klar.",
+      "ServiceUnoDescription": "Vores nøgleservice er professionelle hjemmesider. Tilgængelig på mobile enheder, SEO (Google) klar.",
       "ServiceDos": "RÅDGIVNING",
       "ServiceDosDescription": "Hvordan virksomheden hjælper med at optimere processer ved hjælp af avanceret teknologi.",
       "ServiceTres": "HOSTING",
@@ -25,6 +25,9 @@ const resources = {
       "ServiceCuatroDescription": "Vi leverer luftfotografering og videotjenester med droner",
 
       "Intro": "Condor Labs søger at forbinde kondorens majestæt med avanceret teknologi, der fremhæver en forpligtelse til ekspertise, innovation og bæredygtighed, alle vigtige værdier​​både på det teknologiske område og i Dansk Kultur.",
+
+      "ServicesMainTitle": "De perfekte tjenester",
+      "ServicesMainSubTitle": "Vi tilbyder",
 
       "ServiceTitle": "Systemudvikling",
       "ServiceTitle1": "E-handel",
@@ -53,8 +56,8 @@ const resources = {
       "StoriesTitle": "Meninger",
       "StoriesTitleI": "Tilfredse kunder",
 
-      "StorieUnoH3": "Anna Bøttern",
-      "StorieUnoP": "De udviklede et intuitivt og brugervenligt system til mig, jeg var i stand til at reducere tiden i mine salgsprocesser.",
+      "StorieUnoH3": "Cristina Montoro",
+      "StorieUnoP": "Vi var imponerede over den kreativitet og innovative tilgang, som Condor Labs bragte til udviklingen af ​​vores mobilapp. Ikke alene levede de op til vores forventninger, de overgik dem ved at introducere funktioner, som vi ikke havde overvejet, men som har været nøglen til succesen for vores app på markedet.",
 
       "StorieDosH3": "Henrik Larsen",
       "StorieDosP": "Opmærksomheden på detaljerne, den dybe forståelse af vores behov og evnen til at levere skalerbare løsninger til tiden var enestående. Vi kunne ikke være mere tilfredse med resultatet.",
@@ -62,8 +65,8 @@ const resources = {
       "StorieTresH3": "Charlotte Hansen",
       "StorieTresP": "De hjalp os med at designe og udvikle et helt skræddersyet flådestyringssystem, der giver os mulighed for at optimere vores logistik.",
 
-      "StorieCuatroH3": "Cristina Montoro",
-      "StorieCuatroP": "Vi var imponerede over den kreativitet og innovative tilgang, som Condor Labs bragte til udviklingen af ​​vores mobilapp. Ikke alene levede de op til vores forventninger, de overgik dem ved at introducere funktioner, som vi ikke havde overvejet, men som har været nøglen til succesen for vores app på markedet.",
+      "StorieCuatroH3": "Anna Bøttern",
+      "StorieCuatroP": "De udviklede et intuitivt og brugervenligt system til mig, jeg var i stand til at reducere tiden i mine salgsprocesser.",
 
       "StorieCincoH3": "Isak Ringheim",
       "StorieCincoP": "E-handelsplatformen, som Condor Labs udviklede til os, har transformeret den måde, vi driver forretning på online. Deres team forstod perfekt vores krav og gjorde dem til en intuitiv, hurtig og sikker løsning.",
@@ -100,7 +103,7 @@ const resources = {
       "BannerButton": "About us",
 
       "ServiceUno": "WEB DESIGN",
-      "ServiceUnoDescription": "Our key service is professional and unique websites. Available on mobile devices, SEO (Google) ready.",
+      "ServiceUnoDescription": "Our key service is professional websites. Available on mobile devices, SEO (Google) ready.",
 
       "ServiceDos": "CONSULTING",
       "ServiceDosDescription": "How the company helps to optimize processes using advanced technology.",
@@ -109,9 +112,12 @@ const resources = {
       "ServiceTresDescription": "We offer advanced web hosting and cyber security services.",
 
       "ServiceCuatro": "DRONE IMAGES",
-      "ServiceCuatroDescription": "We offer advanced web hosting and cyber security services.aWe provide aerial photography and video services with drones.",
+      "ServiceCuatroDescription": "We provide aerial photography and video services with drones.",
 
       "Intro": "Condor Labs seeks to connect the majesty of the condor with advanced technology, emphasizing a commitment to excellence, innovation and sustainability, all important values ​​both in the technological field and in Danish culture.",
+
+      "ServicesMainTitle": "The Perfect Services",
+      "ServicesMainSubTitle": "We're Offering",
 
       "ServiceTitle": "System development",
       "ServiceTitle1": "E-commerce",

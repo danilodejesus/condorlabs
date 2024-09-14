@@ -65,12 +65,6 @@ function App() {
     mainBannerH2.classList.add('active')
     const videoBannerSkills = document.querySelector('.videoBanner-skills')
     videoBannerSkills.classList.add('active')
-
-
-    setTimeout(() => {
-      const skills = document.querySelector('.videoBanner-skills')
-      skills.classList.add('active')
-    }, 4000);
     
     const usersRef = ref(database, 'users');
     get(usersRef).then((snapshot) => {
@@ -209,7 +203,8 @@ function App() {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
-          arrows: false,
+          arrows: true,
+          auto: true
         }
       },
       {
@@ -217,7 +212,8 @@ function App() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
+          arrows: true,
+          auto: true,
         }
       }]
   };
@@ -328,6 +324,7 @@ function App() {
       </section>
 
       <section className='Services' id="services">
+        <h3 className='Services-h3'>{t('ServicesMainTitle')} <br/> {t('ServicesMainSubTitle')}</h3>
         <div className='container flex f-start relative'>
           <figure 
             className='Service web' 
@@ -389,62 +386,11 @@ function App() {
         </div>
       </section>
 
-      <section className='Stories'>
-        <div className='container flex evenly'>
-          <h4>
-            {t('StoriesTitle')} <br/>
-            <img src="https://daniloviacava-40daf.web.app/static/img/Fb-rates.png" alt=""/> <br/>
-            <i>{t('StoriesTitleI')}</i>
-          </h4>
-
-          <div className='Stories-slider'>
-            <Slider {...settings}>
-              <div className='Stories-slide'>
-                <h3>{t('StorieUnoH3')}</h3>
-                <p>
-                  {t('StorieUnoP')}
-                </p>
-              </div>
-              <div className='Stories-slide'>
-                <h3>{t('StorieDosH3')}</h3>
-                <p>
-                  {t('StorieDosP')}
-                </p>
-              </div>
-              <div className='Stories-slide'>
-                <h3>{t('StorieTresH3')}</h3>
-                <p>
-                  {t('StorieTresP')}
-                </p>
-              </div>
-              <div className='Stories-slide'>
-                <h3>{t('StorieCuatroH3')}</h3>
-                <p>
-                  {t('StorieCuatroP')}
-                </p>
-              </div>
-              <div className='Stories-slide'>
-                <h3>{t('StorieCincoH3')}</h3>
-                <p>
-                  {t('StorieCincoP')}
-                </p>
-              </div>
-              <div className='Stories-slide'>
-                <h3>{t('StorieSeisH3')}</h3>
-                <p>
-                  {t('StorieSeisP')}
-                </p>
-              </div>
-            </Slider>
-          </div>
-        </div>
-      </section>
-
       <section className='Portafolio'>
         <div className='container'>
           <h4 className='Portafolio-h4'>{t('PortafolioTitle')}
           </h4>
-          <p>{t('PortafolioSubTitle')}</p>
+          <p className='Portafolio-p'>{t('PortafolioSubTitle')}</p>
           <div className='Portafolio-slider'>
             <Slider {...portafolio}>
               <a href="https://profealtoque.com.pe/" target='_blank' className='Portafolio-slide'>
@@ -494,6 +440,57 @@ function App() {
                   </div>
                 </figure>
               </a>
+            </Slider>
+          </div>
+        </div>
+      </section>
+
+      <section className='Stories'>
+        <div className='container flex evenly'>
+          <h4>
+            {t('StoriesTitle')} <br/>
+            <img src="https://daniloviacava-40daf.web.app/static/img/Fb-rates.png" alt=""/> <br/>
+            <i>{t('StoriesTitleI')}</i>
+          </h4>
+
+          <div className='Stories-slider'>
+            <Slider {...settings}>
+              <div className='Stories-slide'>
+                <h3>{t('StorieUnoH3')}</h3>
+                <p>
+                  {t('StorieUnoP')}
+                </p>
+              </div>
+              <div className='Stories-slide'>
+                <h3>{t('StorieDosH3')}</h3>
+                <p>
+                  {t('StorieDosP')}
+                </p>
+              </div>
+              <div className='Stories-slide'>
+                <h3>{t('StorieTresH3')}</h3>
+                <p>
+                  {t('StorieTresP')}
+                </p>
+              </div>
+              <div className='Stories-slide'>
+                <h3>{t('StorieCuatroH3')}</h3>
+                <p>
+                  {t('StorieCuatroP')}
+                </p>
+              </div>
+              <div className='Stories-slide'>
+                <h3>{t('StorieCincoH3')}</h3>
+                <p>
+                  {t('StorieCincoP')}
+                </p>
+              </div>
+              <div className='Stories-slide'>
+                <h3>{t('StorieSeisH3')}</h3>
+                <p>
+                  {t('StorieSeisP')}
+                </p>
+              </div>
             </Slider>
           </div>
         </div>
