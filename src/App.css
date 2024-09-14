@@ -64,7 +64,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-attachment: fixed;
 }
 
 .Main-banner .container {
@@ -318,7 +317,6 @@
   background-size: cover;
   text-align: center;
   position: relative;
-  background-attachment: fixed;
 }
 
 .Connect h4 {
@@ -543,6 +541,7 @@
   .Connect {
     padding: 60px 0px;
     background-position: 0px 0px;
+    animation: bg_move 60s ease infinite
   }
 
   .Connect .flex {
