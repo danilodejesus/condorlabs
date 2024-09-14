@@ -16,6 +16,7 @@ import { ref, get, push, set } from 'firebase/database';
 import './i18n'
 
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 function App() {
 
@@ -58,6 +59,12 @@ function App() {
     header.classList.add('active')
     const title = document.querySelector('.Main-banner h1')
     title.classList.add('active')
+    const bannerLink = document.querySelector('.Main-banner-link')
+    bannerLink.classList.add('active')
+    const mainBannerH2 = document.querySelector('.Main-banner h2')
+    mainBannerH2.classList.add('active')
+    const videoBannerSkills = document.querySelector('.videoBanner-skills')
+    videoBannerSkills.classList.add('active')
 
 
     setTimeout(() => {
@@ -216,6 +223,14 @@ function App() {
   };
   return (
     <div className="App">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Condor Labs</title>
+        <meta 
+          name="Custom Software Development Services | Web & Mobile App Solutions" 
+          content="Looking for custom software development in Roskilde? We specialize in creating high-quality web and mobile applications tailored to your business needs. Boost your growth with our expert solutions in cloud computing, AI, and more. Contact us today for a free consultation!" />
+          <meta name="robots" content="index, follow"></meta>
+      </Helmet>
       <header className="App-header container">
         <a href="/" className='Header-logo'>
           <figure className='flex'>
@@ -257,15 +272,15 @@ function App() {
           <a className='Main-banner-link' href="">
             {t('BannerButton')}
           </a>
-          <ul class="df container videoBanner-skills active">
+          <ul class="df container videoBanner-skills">
             <li>
               <a href="/diseno-web/">
                 <figure class="flex">
                   <img src="https://daniloviacava-40daf.web.app/static/img/responsive.svg" alt="" width={30} />
-                  <h2>WEBDESIGN</h2>
+                  <h2>{t('ServiceUno')}</h2>
                 </figure>
-                <p>Vores nøgleservice er professionelle og unikke hjemmesider. <br/>
-                  <span>Tilgængelig på mobile enheder, SEO (Google) klar.</span>
+                <p>
+                  {t('ServiceUnoDescription')}
                 </p>
               </a>
             </li>
@@ -273,10 +288,10 @@ function App() {
               <a href="/portafolio/">
                 <figure class="flex">
                   <img src="https://daniloviacava-40daf.web.app/static/img/profiles.svg" alt="" width={30} />
-                  <h2>RÅDGIVNING</h2>
+                  <h2>{t('ServiceDos')}</h2>
                 </figure>
                 <p>
-                  Hvordan virksomheden hjælper med at optimere processer ved hjælp af avanceret teknologi.
+                  {t('ServiceDosDescription')}
                 </p>
               </a>
             </li>
@@ -284,10 +299,10 @@ function App() {
               <a href="/viaje-de-trabajo/">
                 <figure class="flex">
                   <img src="https://daniloviacava-40daf.web.app/static/img/handshake.svg" alt="" width={30} />
-                  <h2>HOSTING</h2>
+                  <h2>{t('ServiceTres')}</h2>
                 </figure>
                 <p>
-                  Vi tilbyder avancerede webhosting- og cybersikkerhedstjenester.
+                  {t('ServiceTresDescription')}
                 </p>
               </a>
             </li>
@@ -295,10 +310,10 @@ function App() {
               <a href="/imagenes-de-drones/">
                   <figure class="flex">
                     <img src="https://daniloviacava-40daf.web.app/static/img/drone.svg" alt="" width={30} />
-                  <h2>DRONE BILLEDER</h2>
+                  <h2>{t('ServiceCuatro')}</h2>
                 </figure>
-                <p>Vi leverer luftfotografering og videotjenester med droner.
-                  <span>Drone kørekort certifikater.</span>
+                <p>
+                  {t('ServiceCuatroDescription')}
                 </p>
               </a>
             </li>
@@ -308,10 +323,7 @@ function App() {
 
       <section className='Introduction' id='introduction'>
         <p className=''>
-        Condor Labs søger at forbinde kondorens majestæt med avanceret teknologi, <br/> 
-        der fremhæver en forpligtelse til ekspertise, innovation og bæredygtighed, <br/> 
-        alle vigtige værdier​​både på det teknologiske  <br/> 
-        område og i Dansk Kultur.
+        {t('Intro')}
         </p>
       </section>
 
@@ -323,12 +335,12 @@ function App() {
             onMouseLeave={handleMouseLeave}>
             <img src={responsive} alt="" width="60" />
             <figcaption>
-              Systemudvikling
+              {t('ServiceTitle')}
               <p>
-                E-handel <br/>
-                Webudvikling <br/>
-                Mobilapplikationer <br/>
-                WordPress-opdatering<br/>
+              {t('ServiceTitle1')} <br/>
+              {t('ServiceTitle2')} <br/>
+              {t('ServiceTitle3')} <br/>
+              {t('ServiceTitle4')}<br/>
               </p>
             </figcaption>
           </figure>
@@ -337,12 +349,12 @@ function App() {
             onMouseLeave={mouseLeaveConsultoria}>
             <img src={consultoria} alt="" width="60" />
             <figcaption>
-              Teknologirådgivning
+              {t('ServiceTitleDos')}
               <p>
-                Systemintegration <br/>
-                Softwarerådgivning <br/>
-                Digital transformation <br/>
-                WordPress-opdatering<br/>
+              {t('ServiceTitleDos1')} <br/>
+              {t('ServiceTitleDos2')} <br/>
+              {t('ServiceTitleDos3')} <br/>
+              {t('ServiceTitleDos4')}<br/>
               </p>
             </figcaption>
           </figure>
@@ -351,12 +363,12 @@ function App() {
             onMouseLeave={mouseLeaveSikkerhed}>
             <img src={hosting} alt="" width="60" />
             <figcaption>
-              Hosting og sikkerhed
+              {t('ServiceTitleCuatro')}
               <p>
-                Webhosting <br/>
-                Penetrationstests <br/>
-                24/7 Sikkerhedsovervågning <br/>
-                Webapplikationssikkerhed <br/>
+                {t('ServiceTitleCuatro1')} <br/>
+                {t('ServiceTitleCuatro2')} <br/>
+                {t('ServiceTitleCuatro3')} <br/>
+                {t('ServiceTitleCuatro4')}<br/>
               </p>
             </figcaption>
           </figure>
@@ -365,12 +377,12 @@ function App() {
             onMouseLeave={mouseLeaveBilleder}>
             <img src={drone} alt="" width="60" />
             <figcaption>
-              Drone billeder
+              {t('ServiceTitleTres')}
               <p>
-                Byggeeftersyn <br/>
-                Fotografi og video <br/>
-                Præcision i landbruget <br/>
-                Sikkerhed og overvågning <br/>
+                {t('ServiceTitleTres1')} <br/>
+                {t('ServiceTitleTres2')} <br/>
+                {t('ServiceTitleTres3')} <br/>
+                {t('ServiceTitleTres4')}<br/>
               </p>
             </figcaption>
           </figure>
@@ -380,47 +392,47 @@ function App() {
       <section className='Stories'>
         <div className='container flex evenly'>
           <h4>
-            Meninger <br/>
+            {t('StoriesTitle')} <br/>
             <img src="https://daniloviacava-40daf.web.app/static/img/Fb-rates.png" alt=""/> <br/>
-            <i>Tilfredse kunder</i>
+            <i>{t('StoriesTitleI')}</i>
           </h4>
 
           <div className='Stories-slider'>
             <Slider {...settings}>
               <div className='Stories-slide'>
-                <h3>Anna Bøttern</h3>
+                <h3>{t('StorieUnoH3')}</h3>
                 <p>
-                  De udviklede et intuitivt og brugervenligt system til mig, jeg var i stand til at reducere tiden i mine salgsprocesser.
+                  {t('StorieUnoP')}
                 </p>
               </div>
               <div className='Stories-slide'>
-                <h3>Henrik Larsen</h3>
+                <h3>{t('StorieDosH3')}</h3>
                 <p>
-                  Opmærksomheden på detaljerne, den dybe forståelse af vores behov og evnen til at levere skalerbare løsninger til tiden var enestående. Vi kunne ikke være mere tilfredse med resultatet.
+                  {t('StorieDosP')}
                 </p>
               </div>
               <div className='Stories-slide'>
-                <h3>Charlotte Hansen</h3>
+                <h3>{t('StorieTresH3')}</h3>
                 <p>
-                  De hjalp os med at designe og udvikle et helt skræddersyet flådestyringssystem, der giver os mulighed for at optimere vores logistik.
+                  {t('StorieTresP')}
                 </p>
               </div>
               <div className='Stories-slide'>
-                <h3>Cristina Montoro</h3>
+                <h3>{t('StorieCuatroH3')}</h3>
                 <p>
-                  Vi var imponerede over den kreativitet og innovative tilgang, som Condor Labs bragte til udviklingen af ​​vores mobilapp. Ikke alene levede de op til vores forventninger, de overgik dem ved at introducere funktioner, som vi ikke havde overvejet, men som har været nøglen til succesen for vores app på markedet.
+                  {t('StorieCuatroP')}
                 </p>
               </div>
               <div className='Stories-slide'>
-                <h3>Isak Ringheim</h3>
+                <h3>{t('StorieCincoH3')}</h3>
                 <p>
-                  E-handelsplatformen, som Condor Labs udviklede til os, har transformeret den måde, vi driver forretning på online. Deres team forstod perfekt vores krav og gjorde dem til en intuitiv, hurtig og sikker løsning.
+                  {t('StorieCincoP')}
                 </p>
               </div>
               <div className='Stories-slide'>
-                <h3>Christian Sørensen</h3>
+                <h3>{t('StorieSeisH3')}</h3>
                 <p>
-                  De hjalp os med at udvikle en mobil aftalebestillingsapp, vi har set en markant stigning i konverteringer og en forbedring af brugeroplevelsen. Jeg vil helt klart anbefale deres tjenester til enhver virksomhed, der ønsker at skille sig ud på det digitale marked.
+                  {t('StorieSeisP')}
                 </p>
               </div>
             </Slider>
@@ -430,9 +442,9 @@ function App() {
 
       <section className='Portafolio'>
         <div className='container'>
-          <h4 className='Portafolio-h4'>Vores projekter er vores passion
+          <h4 className='Portafolio-h4'>{t('PortafolioTitle')}
           </h4>
-          <p>Webprojekter</p>
+          <p>{t('PortafolioSubTitle')}</p>
           <div className='Portafolio-slider'>
             <Slider {...portafolio}>
               <a href="https://profealtoque.com.pe/" target='_blank' className='Portafolio-slide'>
@@ -489,7 +501,7 @@ function App() {
 
       <section className='Connect' id="kontakt">
         <div className='container relative'>
-          <h4>Kontakt os</h4>
+          <h4>{t('ContactTitle')}</h4>
 
           {/* <div>
             <h4>Data from realtime database</h4>
@@ -510,26 +522,26 @@ function App() {
                   type='text'
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder='Navne' />
+                  placeholder={t('ContactName')} />
                 <input 
                   type='text'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder='Email' />
+                  placeholder={t('ContactEmailForm')} />
                 <input 
                   type='text'
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder='Cellulære' />
+                  placeholder={t('ContactPhoneForm')} />
                 <input 
                   type='text'
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder='Besked'
-                  className='Input-message' />
+                  placeholder={t('ContactMessageForm')}
+                  className="Input-message" />
                 
                 <button className='button' onClick={handleData}>
-                  Sende
+                  {t('ContactButtonForm')}
                 </button>
               </form>
             </div>
@@ -537,22 +549,22 @@ function App() {
               <ul>
                 <li>
                   <p>
-                    Adresse: Tofthøjvej 18 2th
+                    {t('ContactAddresse')}
                   </p>
                 </li>
                 <li>
                   <p>
-                    Email: danilojesusv@gmail.com
+                    {t('ContactEmail')}
                   </p>
                 </li>
                 <li>
                   <p>
-                    Cellulær: +45 60 90 22 94
+                    {t('ContactPhone')}
                   </p>
                 </li>
                 <li>
                   <p>
-                    CVR: 44989646
+                    {t('ContactCVR')}
                   </p>
                 </li>
               </ul>
